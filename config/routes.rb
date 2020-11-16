@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     collection do
       get :news
       get :newsDetail
+      get :access
     end
   end
 end
