@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
   root to: "skips#index"
-  resources :skips, only: :index
+  resources :skips do
+    collection do
+      get :news
+    end
+  end
 end

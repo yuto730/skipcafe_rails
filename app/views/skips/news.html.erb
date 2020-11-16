@@ -1,0 +1,96 @@
+<%= render "shared/header" %>
+
+<!-- ファーストビュー -->
+<div class="kasou_midashi">
+  <h2>News</h2>
+  <p class="kasou_border">お知らせ一覧</p>
+</div>
+
+<!-- ニュース一覧 -->
+<section>
+  <div class="news_flex">
+    <div class="news_contents">
+      <%= link_to "#" do %>
+        <div class="news_img">
+          <%= image_tag "news_img01.png" %>
+        </div>
+        <div class="news_info">
+          <time>2020.01.01</time>
+          <h4>お知らせタイトル</h4>
+          <p>お知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキスト</p>
+        </div>
+      <% end %>
+    </div>
+    <!-- 複製 -->
+    <div class="news_contents">
+      <%= link_to "#" do %>
+        <div class="news_img">
+          <%= image_tag "news_img01.png" %>
+        </div>
+        <div class="news_info">
+          <time>2020.01.01</time>
+          <h4>お知らせタイトル</h4>
+          <p>お知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキスト</p>
+        </div>
+      <% end %>
+    </div>
+    <div class="news_contents">
+      <%= link_to "#" do %>
+        <div class="news_img">
+          <%= image_tag "news_img01.png" %>
+        </div>
+        <div class="news_info">
+          <time>2020.01.01</time>
+          <h4>お知らせタイトル</h4>
+          <p>お知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキスト</p>
+        </div>
+      <% end %>
+    </div>
+    <div class="news_contents">
+      <%= link_to "#" do %>
+        <div class="news_img">
+          <%= image_tag "news_img01.png" %>
+        </div>
+        <div class="news_info">
+          <time>2020.01.01</time>
+          <h4>お知らせタイトル</h4>
+          <p>お知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキスト</p>
+        </div>
+      <% end %>
+    </div>
+    <div class="news_contents">
+      <%= link_to "#" do %>
+        <div class="news_img">
+          <%= image_tag "news_img01.png" %>
+        </div>
+        <div class="news_info">
+          <time>2020.01.01</time>
+          <h4>お知らせタイトル</h4>
+          <p>お知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキスト</p>
+        </div>
+      <% end %>
+    </div>
+    <div class="news_contents">
+      <%= link_to "#" do %>
+        <div class="news_img">
+          <%= image_tag "news_img01.png" %>
+        </div>
+        <div class="news_info">
+          <time>2020.01.01</time>
+          <h4>お知らせタイトル</h4>
+          <p>お知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキスト</p>
+        </div>
+      <% end %>
+    </div>
+    <!-- 複製 -->
+  </div>
+  <ul id="pagination">
+    <li class="pagination"><%= link_to '前へ', "#" %></li>
+    <li class="pagination"><%= link_to '1', "#" %></li>
+    <li class="pagination"><%= link_to '2', "#" %></li>
+    <li class="pagination"><%= link_to '3', "#" %></li>
+    <li class="pagination"><%= link_to '次へ', "#" %></li>
+  </ul>
+</section>
+
+<%= render "shared/footer" %>
