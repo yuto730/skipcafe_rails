@@ -1,21 +1,21 @@
 <footer>
-    <div>
-      <a href="../views/index.html">
-        <%= image_tag "logo.png" %>
-      </a>
-    </div>
-    <p id="copyright">&copy;skipcafe&nbsp;all&nbsp;right&nbsp;reserved</p>
-  </footer>
+  <div>
+    <%= link_to(root_path) do %>
+      <%= image_tag "logo.png", class: "footer_logo" %>
+    <% end %>
+  </div>
+  <p id="copyright">&copy;skipcafe&nbsp;all&nbsp;right&nbsp;reserved</p>
+</footer>
 
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script>
-    $("#hamburger").on("click", function(){
-      $("#nav").toggleClass("sp_nav");
-    });
-  </script>
-  <script>
-    $("#hamburger").on("click", function(){
-      $("#hamburger").toggleClass("close");
-    });
-  </script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+  $("#hamburger").on("click", function(){
+    $("#nav").toggleClass("sp_nav");
+  });
+</script>
+<script>
+  $("#hamburger").on("click", function(){
+    $("#hamburger").toggleClass("close");
+  });
+</script>
