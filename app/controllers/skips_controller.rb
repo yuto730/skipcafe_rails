@@ -4,4 +4,7 @@ class SkipsController < ApplicationController
 
   def news
   end
+
+  def newsDetail
+  end
 end
