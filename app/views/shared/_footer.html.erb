@@ -1,0 +1,21 @@
+<footer>
+    <div>
+      <a href="../views/index.html">
+        <%= image_tag "logo.png" %>
+      </a>
+    </div>
+    <p id="copyright">&copy;skipcafe&nbsp;all&nbsp;right&nbsp;reserved</p>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $("#hamburger").on("click", function(){
+      $("#nav").toggleClass("sp_nav");
+    });
+  </script>
+  <script>
+    $("#hamburger").on("click", function(){
+      $("#hamburger").toggleClass("close");
+    });
+  </script>
