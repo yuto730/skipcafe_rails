@@ -1,23 +1,25 @@
 <div id="hamburger" class="hamburger">
-    <span class="hamburger_line"></span>
-  </div>
-  <header>
-    <div class="header_flex">
-      <h1>
-        <a href="../views/index.html"><%= image_tag "logo.png" %></a>
-      </h1>
-      <nav id="nav">
-        <ul>
-          <li><a href="../views/news.html">News</a></li>
-          <li><a href="../views/access.html">Access</a></li>
-          <li><a href="../views/contact.html">Contact</a></li>
-          <li><a href="http://skip.ocnk.net/">Online&nbsp;Shop</a></li>
-        </ul>
-      </nav>
-      <div class="instagram">
-        <a href="https://www.instagram.com/skipcafe/" target="_blank">
-          <%= image_tag "instagram.png" %>
-        </a>
-      </div>
+  <span class="hamburger_line"></span>
+</div>
+<header>
+  <div class="header_flex">
+    <h1>
+      <%= link_to(root_path) do %>
+        <%= image_tag "logo.png", class: "logo" %>
+      <% end %>
+    </h1>
+    <nav id="nav">
+      <ul>
+        <li><%= link_to 'News', news_skips_path %></li>
+        <li><%= link_to 'Access', "#" %></li>
+        <li><%= link_to 'Contact', "#" %></li>
+        <li><a href="http://skip.ocnk.net/">Online&nbsp;Shop</a></li>
+      </ul>
+    </nav>
+    <div class="instagram">
+      <a href="https://www.instagram.com/skipcafe/" target="_blank">
+        <%= image_tag "instagram.png" %>
+      </a>
     </div>
-  </header>
+  </div>
+</header>
