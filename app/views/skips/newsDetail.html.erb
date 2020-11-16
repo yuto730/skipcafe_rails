@@ -1,0 +1,55 @@
+<%= render "shared/header" %>
+
+<!-- ファーストビュー -->
+<div class="kasou_midashi">
+  <h2>News</h2>
+  <p class="kasou_border">お知らせ</p>
+</div>
+
+<!-- ニュース詳細 -->
+<section>
+  <div id="news_details">
+    <div class="news_details">
+      <time>2020.01.01</time>
+      <h4>お知らせタイトル</h4>
+      <%= image_tag "news_img01.png" %>
+      <p>
+        ●お知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキスト<br>
+        ●お知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキスト
+      </p>
+    </div>
+
+    <!-- ニュース右ナビゲーション -->
+    <div class="news_nav">
+      <div class="news_details_contents">
+        <%= link_to newsDetail_skips_path do %>
+          <div class="news_img news_nav_img">
+            <%= image_tag "news_img01.png" %>
+          </div>
+          <div class="news_details_info">
+            <time>2020.01.01</time>
+            <h4>お知らせタイトル</h4>
+            <p>お知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキスト</p>
+          </div>
+        <% end %>
+      </div>
+      <div class="news_details_contents">
+        <%= link_to newsDetail_skips_path do %>
+          <div class="news_img news_nav_img">
+            <%= image_tag "news_img01.png" %>
+          </div>
+          <div class="news_details_info">
+            <time>2020.01.01</time>
+            <h4>お知らせタイトル</h4>
+            <p>お知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキスト</p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="more_news">
+    <%= link_to 'ニュース一覧', news_skips_path %>
+  </div>
+</section>
+
+<%= render "shared/footer" %>
