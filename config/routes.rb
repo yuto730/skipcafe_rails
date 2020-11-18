@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       get :news
       get :newsDetail
       get :access
+      get :contact
     end
   end
 end
