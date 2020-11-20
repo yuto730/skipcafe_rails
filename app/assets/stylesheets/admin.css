@@ -1,0 +1,132 @@
+/* ログイン */
+#admin_login{
+  width: 100vw;
+  height: 100vh;
+  background-image: url("skipcafe_img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+}
+.admin_box{
+  padding-top: 140px;
+}
+.admin_login{
+  width: 920px;
+  margin: 0 auto;
+  padding: 80px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.admin_login h2{
+  text-align: center;
+  font-size: 22px;
+  border-bottom: 1px solid #E7E7E7;
+  padding-bottom: 20px;
+}
+.admin_login form{
+  margin-top: 0;
+}
+.field{
+  padding-top: 30px;
+}
+.field input{
+  width: 100%;
+  margin-top: 15px;
+}
+.actions{
+  text-align: center;
+  padding-top: 60px;
+}
+.actions_login{
+  width: 160px;
+  height: 42px;
+  text-align: center;
+  color: #fff;
+  background-color: #707070;
+}
+.actions_login:hover{
+  opacity: 0.6;
+}
+
+/* 新規登録 */
+.admin_form{
+  width: 1180px;
+  margin: 0 auto;
+}
+.admin_form h2{
+  border-top: 4px solid #E8E8EB;
+  padding: 10px;
+  font-size: 18px;
+}
+.admin_form form{
+  margin-top: 0px;
+  padding: 10px;
+  border-top: 1px solid #E8E8E8;
+}
+.admin_submit{
+  width: 170px;
+}
+
+/* トップページ */
+.admin{
+  display: flex;
+}
+#admin_nav{
+  width: 260px;
+  height: 100vh;
+  background-color: #E7E7E7;
+}
+#admin_nav h1{
+  text-align: center;
+}
+.admin_logo{
+  width: 70px;
+  padding: 20px 0;
+  text-align: center;
+}
+.admin_nav{
+  padding: 15px 0;
+}
+.admin_nav li{
+  padding: 15px 0 15px;
+}
+.admin_content{
+  padding-right: 70px;
+}
+.fa-angle-right{
+  transform: rotate(90deg);
+}
+#admin_contents{
+  width: 100vw;
+  background-color: #F7F7F7;
+}
+.admin_header{
+  text-align: end;
+  padding: 35px 40px;
+  background-color: #fff;
+}
+.log_out{
+  padding: 28px 4px;
+  border-radius: 50%;
+  background-color: #E7E7E7;
+  font-size: 12px;
+}
+.admin_contents{
+  width: 80vw;
+  height: 75vh;
+  margin: 0 auto;
+}
+.admin_access{
+  width: 80vw;
+  margin: 40px auto 0;
+  background-color: #fff;
+  border-top: 4px solid #E7E7E7;
+}
+.admin_access h2{
+  padding: 30px 0 50px 20px;
+}
+.admin_footer{
+  padding: 20px;
+  border-top: 4px solid #E7E7E7;
+  background-color: #fff;
+}

@@ -1,0 +1,40 @@
+<section class="admin">
+  <nav id="admin_nav">
+    <h1>
+      <%= link_to(admins_path) do %>
+        <%= image_tag "logo.png", class: "admin_logo" %>
+      <% end %>
+    </h1>
+    <ul class="admin_nav">
+      <li>
+        <i class="fas fa-laptop"></i>
+        <%= link_to 'Home', "#", class: "admin_content" %>
+      </li>
+      <li>
+        <i class="fas fa-user"></i>
+        <%= link_to 'ユーザー管理', "#", class: "admin_content" %>
+        <i class="fas fa-angle-right"></i>
+      </li>
+      <li>
+        <i class="fas fa-file-alt"></i>
+        <%= link_to 'お知らせ管理', "#", class: "admin_content" %>
+        <i class="fas fa-angle-right"></i>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="admin_contents">
+    <div class="admin_header">
+      <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "log_out" %>
+    </div>
+    <div class="admin_contents">
+      <div class="admin_access">
+        <h2>アクセス情報</h2>
+        <%= image_tag "access.png" %>
+      </div>
+    </div>
+    <div class="admin_footer">
+      <p>©skipcafe all right reserved.</p>
+    </div>
+  </div>
+</section>
