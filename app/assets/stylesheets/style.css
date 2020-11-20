@@ -378,8 +378,8 @@ footer{
 /* Accessページ */
 #access{
   background-image: url("skipcafe_img.jpg");
-    background-repeat: no-repeat;
-    background-size: 100vw;
+  background-repeat: no-repeat;
+  background-size: 100vw;
 }
 .access{
   padding-top: 450px;
