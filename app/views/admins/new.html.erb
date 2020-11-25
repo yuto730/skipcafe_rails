@@ -1,0 +1,36 @@
+<section class="admin">
+  <%= render "shared/left_nav" %>
+
+  <div id="admin_contents">
+    <%= render "shared/log_out" %>
+    <div class="admin_contents">
+      <div class="admin_title">
+        <h2>お知らせ投稿</h2>
+        <%= form_with model: @admin, url: admins_path, local: true, id: "admin_news_form" do |f| %>
+          <div class="admin_news_form">
+            <label>タイトル<span>必須</span></label><br>
+            <%= f.text_field :title, placeholder: "最大入力20文字" %>
+          </div>
+
+          <%# <div class="admin_news_form">
+            <label>掲載開始日</label>
+            <%= f.text_field :url %>
+          <%# </div> %>
+
+          <div class="admin_news_form">
+            <label>サムネイル画像<span>必須</span></label><br>
+            <%= f.file_field :image, id:"news_image" %>
+          </div>
+          <div class="admin_news_form">
+            <label>お知らせ詳細<span>必須</span></label><br>
+            <%= f.text_area :description, placeholder: "最大入力1000文字", rows:"10" %>
+          </div>
+          <div class="admin_news_submit">
+            <%= f.submit "登録" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <%= render "shared/admin_footer" %>
+  </div>
+</section>

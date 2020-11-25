@@ -1,0 +1,47 @@
+<section class="admin">
+  <%= render "shared/left_nav" %>
+
+  <div id="admin_contents">
+    <%= render "shared/log_out" %>
+    <div class="admin_contents">
+      <div class="admin_title">
+        <h2>お知らせ一覧</h2>
+        <table id="admin_table">
+          <tr class="admin_table">
+            <th>No</th>
+            <th>タイトル</th>
+            <th>掲載開始日</th>
+            <th>登録日時</th>
+            <th>編集</th>
+            <th>削除</th>
+          </tr>
+          <% @admins.each do |admin| %>
+            <tr class="admin_table">
+              <td>
+                <%= admin.id %>
+              </td>
+              <td>
+                <%= admin.title %>
+              </td>
+              <td>-</td>
+              <td>
+                <%= admin.updated_at.strftime("%Y/%m/%d") %>
+              </td>
+              <td>
+                <%= link_to (edit_admin_path(admin.id)) do %>
+                  <%= image_tag "edit.svg", class: "news_table_logo" %>
+                <% end %>
+              </td>
+              <td>
+                <%= link_to (admin_path(admin.id)), method: :delete do %>
+                  <%= image_tag "bin.svg", class: "news_table_logo" %>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </table>
+      </div>
+    </div>
+    <%= render "shared/admin_footer" %>
+  </div>
+</section>

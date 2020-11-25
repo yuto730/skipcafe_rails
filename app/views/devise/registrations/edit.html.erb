@@ -1,43 +1,59 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<section class="admin">
+  <%= render "shared/left_nav" %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <div id="admin_contents">
+    <%= render "shared/log_out" %>
+    <div class="admin_title">
+      <h2>ユーザー情報編集</h2>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%# <%= render "devise/shared/error_messages", resource: resource %>
+        <div class="user_edit">
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          <div class="user_edit_field left_field">
+            <label>ユーザー名</label>
+            <%= f.text_field :nickname, autofocus: true, autocomplete: "nickname" %>
+          </div>
+
+          <div class="user_edit_field right_field">
+            <label>メールアドレス</label>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          </div>
+
+          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+            <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+          <% end %>
+
+          <div class="user_edit_field left_field">
+            <label>新しいパスワード</label>
+            <%= f.password_field :password, autocomplete: "new-password", placeholder:"変更したくない場合は空白のままにします" %>
+          </div>
+
+          <div class="user_edit_field right_field">
+            <label>新しいパスワード（確認用）</label>
+            <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+          </div>
+
+          <div class="user_edit_field left_field">
+            <label>名字</label>
+            <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name" %>
+          </div>
+
+          <div class="user_edit_field right_field">
+            <label>名前</label>
+            <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name" %>
+          </div>
+
+          <div class="user_edit_field left_field">
+            <label>現在のパスワード</label>
+            <%= f.password_field :current_password, autocomplete: "current-password", placeholder:"変更を確認するには、現在のパスワードが必要です" %>
+          </div>
+
+        </div>
+        <div class="user_edit_actions">
+          <%= f.submit "変更" %>
+        </div>
+      <% end %>
+    </div>
+    <%= render "shared/admin_footer" %>
   </div>
-
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+</section>
