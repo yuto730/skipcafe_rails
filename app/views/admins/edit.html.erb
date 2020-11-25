@@ -1,0 +1,36 @@
+<section class="admin">
+  <%= render "shared/left_nav" %>
+
+  <div id="admin_contents">
+    <%= render "shared/log_out" %>
+    <div class="admin_contents">
+      <div class="admin_title">
+        <h2>お知らせ編集</h2>
+        <%= form_with model: @admin, local: true, id: "news_edit_form" do |f| %>
+          <div class="news_edit_form">
+            <label>タイトル<span>必須</span></label><br>
+            <%= f.text_field :title, placeholder: "最大入力20文字", autofocus: true, autocomplete: "title" %>
+          </div>
+
+          <%# <div class="news_edit_form">
+            <label>掲載開始日</label>
+            <%= f.text_field :url %>
+          <%# </div> %>
+
+          <div class="news_edit_form">
+            <label>サムネイル画像<span>必須</span></label><br>
+            <%= f.file_field :image, autofocus: true, autocomplete: "image", id:"news_image" %>
+          </div>
+          <div class="news_edit_form">
+            <label>お知らせ詳細<span>必須</span></label><br>
+            <%= f.text_area :description, placeholder: "最大入力1000文字", autofocus: true, autocomplete: "description", rows:"10" %>
+          </div>
+          <div class="news_edit_submit">
+            <%= f.submit "更新" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <%= render "shared/admin_footer" %>
+  </div>
+</section>

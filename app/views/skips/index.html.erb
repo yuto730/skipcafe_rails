@@ -105,56 +105,28 @@
     <div class="line"></div>
   </div>
   <div class="top_news_flex">
-    <div class="top_news_contents">
-      <%= link_to newsDetail_skips_path do %>
-        <div class="top_news_img">
-          <%= image_tag "news_img01.png" %>
-        </div>
-        <div class="top_news_info">
-          <time>2020.01.01</time>
-          <h4>お知らせタイトル</h4>
-          <p>お知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキスト</p>
-        </div>
-      <% end %>
-    </div>
-    <!-- 複製 -->
-    <div class="top_news_contents">
-      <%= link_to newsDetail_skips_path do %>
-        <div class="top_news_img">
-          <%= image_tag "news_img01.png" %>
-        </div>
-        <div class="top_news_info">
-          <time>2020.01.01</time>
-          <h4>お知らせタイトル</h4>
-          <p>お知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキスト</p>
-        </div>
-      <% end %>
-    </div>
-    <div class="top_news_contents">
-      <%= link_to newsDetail_skips_path do %>
-        <div class="top_news_img">
-          <%= image_tag "news_img01.png" %>
-        </div>
-        <div class="top_news_info">
-          <time>2020.01.01</time>
-          <h4>お知らせタイトル</h4>
-          <p>お知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキスト</p>
-        </div>
-      <% end %>
-    </div>
-    <div class="top_news_contents">
-      <%= link_to newsDetail_skips_path do %>
-        <div class="top_news_img">
-          <%= image_tag "news_img01.png" %>
-        </div>
-        <div class="top_news_info">
-          <time>2020.01.01</time>
-          <h4>お知らせタイトル</h4>
-          <p>お知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキストお知らせテキスト</p>
-        </div>
-      <% end %>
-    </div>
-    <!-- 複製 -->
+
+    <% @admins.first(4).each do |admin| %>
+      <div class="top_news_contents">
+        <%= link_to newsDetail_skip_path(admin.id) do %>
+          <div class="top_news_img">
+            <%= image_tag admin.image if admin.image.attached? %>
+          </div>
+          <div class="top_news_info">
+            <time>
+              <%= admin.created_at.strftime("%Y.%m.%d") %>
+            </time>
+            <h4>
+              <%= admin.title.truncate(12) %>
+            </h4>
+            <p>
+              <%= safe_join(admin.description.truncate(48).split("\n"),tag(:br)) %>
+            </p>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+
   </div>
   <div class="more_news">
     <%= link_to 'ニュース一覧', news_skips_path %>

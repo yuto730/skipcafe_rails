@@ -1,4 +1,4 @@
-/* ログイン */
+/* ログイン画面 */
 #admin_login{
   width: 100vw;
   height: 100vh;
@@ -26,14 +26,14 @@
 .admin_login form{
   margin-top: 0;
 }
-.field{
+.user_login_field{
   padding-top: 30px;
 }
-.field input{
+.user_login_field input{
   width: 100%;
   margin-top: 15px;
 }
-.actions{
+.user_login_actions{
   text-align: center;
   padding-top: 60px;
 }
@@ -46,6 +46,158 @@
 }
 .actions_login:hover{
   opacity: 0.6;
+  transition: 0.2s;
+}
+
+/* トップページ */
+.admin{
+  display: flex;
+}
+
+/* 左ナビゲーション */
+#admin_nav{
+  position: fixed;
+  width: 17vw;
+  height: 100vh;
+  background-color: #E7E7E7;
+}
+#admin_nav h1{
+  text-align: center;
+}
+.admin_logo{
+  width: 70px;
+  padding: 20px 0;
+  text-align: center;
+}
+.admin_nav{
+  padding: 15px 0;
+}
+.admin_nav_home{
+  padding: 15px 0 15px 10px;
+}
+.admin_nav_home:hover{
+  background-color: #D7D7D7;
+  transition: 0.4s;
+}
+.admin_nav_home a{
+  display: inline-block;
+  font-size: 16px;
+}
+.admin_nav_link:hover{
+  background-color: #D7D7D7;
+  transition: 0.4s;
+}
+.admin_nav_link a{
+  display: block;
+  padding: 15px 0px 15px 10px;
+}
+.admin_nav_text{
+  padding: 15px 0 15px 10px;
+  background-color: #D7D7D7;
+}
+.fa-angle-right{
+  position: absolute;
+  right: 30px;
+  transform: rotate(90deg);
+}
+.admin_content{
+  font-size: 14px;
+}
+
+/* 右コンテンツ */
+#admin_contents{
+  position: absolute;
+  right: 0;
+  width: 83vw;
+  height: 100%;
+  background-color: #F7F7F7;
+}
+
+/* ヘッダー */
+.admin_header{
+  text-align: end;
+  padding: 35px 40px;
+  background-color: #fff;
+}
+.log_out{
+  padding: 28px 4px;
+  border-radius: 50%;
+  background-color: #E7E7E7;
+  font-size: 12px;
+}
+/* コンテンツ */
+.admin_contents{
+  width: 80vw;
+  margin: 0 auto;
+}
+.admin_title{
+  width: 80vw;
+  margin: 40px auto 0;
+  background-color: #fff;
+  border-top: 4px solid #E7E7E7;
+}
+.admin_title h2{
+  padding: 30px 0 15px 20px;
+  font-size: 20px;
+  border-bottom: 1px solid #E7E7E7;
+}
+.admin_ga{
+  width: 100%;
+  margin-top: 30px;
+}
+
+/* フッター */
+.admin_footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  border-top: 4px solid #E7E7E7;
+  background-color: #fff;
+}
+
+/* ユーザー情報編集 */
+.user_edit{
+  width: 78vw;
+  margin: 50px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.user_edit_field{
+  padding-bottom: 30px;
+  text-align: end;
+}
+.user_edit_field label{
+  margin-right: 10px;
+  font-size: 14px;
+  text-align: right;
+}
+.user_edit_field input{
+  width: 350px;
+  text-align: start;
+  border: 1px solid #E7E7E7;
+}
+.left_field{
+  width: 500px;
+}
+.right_field{
+  width: 560px;
+}
+.user_edit_actions{
+  text-align: center;
+  padding: 30px 0 40px;
+}
+.user_edit_actions input{
+  width: 160px;
+  height: 42px;
+  text-align: center;
+  color: #fff;
+  background-color: #707070;
+}
+.user_edit_actions input:hover{
+  opacity: 0.6;
+  transition: 0.2s;
 }
 
 /* 新規登録 */
@@ -67,66 +219,116 @@
   width: 170px;
 }
 
-/* トップページ */
-.admin{
-  display: flex;
+/* お知らせ新規投稿 */
+#admin_news_form{
+  width: 77vw;
+  margin: 30px auto 120px;
 }
-#admin_nav{
-  width: 260px;
-  height: 100vh;
-  background-color: #E7E7E7;
+.admin_news_form{
+  margin-bottom: 40px;
 }
-#admin_nav h1{
-  text-align: center;
+.admin_news_form label{
+  font-size: 17px;
 }
-.admin_logo{
-  width: 70px;
-  padding: 20px 0;
-  text-align: center;
+.admin_news_form span{
+  background-color: #666666;
+  padding: 6px 12px;
+  margin-left: 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #fff;
 }
-.admin_nav{
-  padding: 15px 0;
+.admin_news_form input,.admin_news_form textarea{
+  margin-top: 15px;
+  width: 820px;
+  border: 1px solid #E7E7E7;
 }
-.admin_nav li{
-  padding: 15px 0 15px;
-}
-.admin_content{
-  padding-right: 70px;
-}
-.fa-angle-right{
-  transform: rotate(90deg);
-}
-#admin_contents{
-  width: 100vw;
+#news_image{
+  padding: 60px 300px;
   background-color: #F7F7F7;
 }
-.admin_header{
-  text-align: end;
-  padding: 35px 40px;
-  background-color: #fff;
+.admin_news_submit{
+  padding-bottom: 120px;
 }
-.log_out{
-  padding: 28px 4px;
-  border-radius: 50%;
-  background-color: #E7E7E7;
-  font-size: 12px;
+.admin_news_submit input{
+  width: 160px;
+  height: 42px;
+  text-align: center;
+  color: #fff;
+  background-color: #707070;
 }
-.admin_contents{
-  width: 80vw;
-  height: 75vh;
-  margin: 0 auto;
+.admin_news_submit input:hover{
+  opacity: 0.6;
+  transition: 0.2s;
 }
-.admin_access{
-  width: 80vw;
+
+/* お知らせ一覧 */
+#admin_table{
+  width: 96%;
   margin: 40px auto 0;
-  background-color: #fff;
-  border-top: 4px solid #E7E7E7;
+  border: 1px solid #D7D7D7;
 }
-.admin_access h2{
-  padding: 30px 0 50px 20px;
+.admin_table th{
+  padding: 15px 0px;
+  text-align: center;
+  background-color: #E7E7E7;
+  border-right: 1px solid #D7D7D7;
 }
-.admin_footer{
-  padding: 20px;
-  border-top: 4px solid #E7E7E7;
-  background-color: #fff;
+.admin_table th:last-child{
+  border-right: none;
+}
+.admin_table td{
+  padding: 15px 0;
+  text-align: center;
+  border-right: 1px solid #D7D7D7;
+  border-bottom: 1px solid #D7D7D7;
+}
+.admin_table td:last-child{
+  border-right: none;
+}
+.news_table_logo{
+  width: 24px;
+}
+
+/* お知らせ編集 */
+#news_edit_form{
+  width: 77vw;
+  margin: 30px auto 120px;
+}
+.news_edit_form{
+  margin-bottom: 40px;
+}
+.news_edit_form label{
+  font-size: 17px;
+}
+.news_edit_form span{
+  background-color: #666666;
+  padding: 6px 12px;
+  margin-left: 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #fff;
+}
+.news_edit_form input,.news_edit_form textarea{
+  margin-top: 15px;
+  width: 820px;
+  border: 1px solid #E7E7E7;
+}
+#news_image{
+  padding: 60px 300px;
+  background-color: #F7F7F7;
+}
+.news_edit_submit{
+  padding-bottom: 120px;
+}
+.news_edit_submit input{
+  width: 160px;
+  height: 42px;
+  text-align: center;
+  color: #fff;
+  background-color: #707070;
+}
+.news_edit_submit input:hover{
+  opacity: 0.6;
+  transition: 0.2s;
 }

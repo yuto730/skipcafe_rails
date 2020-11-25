@@ -1,0 +1,35 @@
+<nav id="admin_nav">
+  <h1>
+    <%= link_to(root_path) do %>
+      <%= image_tag "logo.png", class: "admin_logo" %>
+    <% end %>
+  </h1>
+  <ul class="admin_nav">
+    <li class="admin_nav_home">
+      <i class="fas fa-laptop"></i>
+      <%= link_to 'Home', admins_path, class: "admin_content" %>
+    </li>
+    <li class="admin_nav_text">
+      <i class="fas fa-user"></i>
+      <span>ユーザー管理</span>
+      <i class="fas fa-angle-right"></i>
+    </li>
+    <li class="admin_nav_link">
+      <%= link_to '- ユーザー情報の編集', edit_user_registration_path, class: "admin_content" %>
+    </li>
+    <li class="admin_nav_link">
+      <%= link_to '- ユーザー一覧', new_user_registration_path, class: "admin_content" %>
+    </li>
+    <li class="admin_nav_text">
+      <i class="fas fa-file-alt"></i>
+      <span>お知らせ管理</span>
+      <i class="fas fa-angle-right"></i>
+    </li>
+    <li class="admin_nav_link">
+      <%= link_to '- お知らせ新規投稿', new_admin_path, class: "admin_content" %>
+    </li>
+    <li class="admin_nav_link">
+      <%= link_to '- お知らせ一覧', news_admins_path, class: "admin_content" %>
+    </li>
+  </ul>
+</nav>

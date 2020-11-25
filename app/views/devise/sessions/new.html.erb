@@ -3,15 +3,15 @@
     <div class="admin_login">
       <h2>スキップカフェ管理画面</h2>
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="field">
+        <div class="user_login_field">
           <label>メールアドレス</label>
           <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
         </div>
-        <div class="field">
+        <div class="user_login_field">
           <label>パスワード</label>
           <%= f.password_field :password, autocomplete: "current-password" %>
         </div>
-        <div class="actions">
+        <div class="user_login_actions">
           <%= f.submit "ログイン", class: "actions_login" %>
         </div>
       <% end %>
