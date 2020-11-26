@@ -18,7 +18,7 @@ class AdminsController < ApplicationController
   end
 
   def news
-    @admins = Admin.order("created_at DESC")
+    @admins = Admin.order("created_at DESC").page(params[:page]).per(5)
   end
 
   def edit

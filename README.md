@@ -98,7 +98,7 @@ SkipカフェWebサイト
 
 ### Association
 
-- has_many :news
+- has_many :admins
 
 ## admins テーブル
 

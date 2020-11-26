@@ -33,21 +33,95 @@
   width: 100%;
   margin-top: 15px;
 }
-.user_login_actions{
+.user_login_action{
   text-align: center;
   padding-top: 60px;
 }
-.actions_login{
+.action_login{
   width: 160px;
   height: 42px;
   text-align: center;
   color: #fff;
   background-color: #707070;
 }
-.actions_login:hover{
+.action_login:hover{
   opacity: 0.6;
   transition: 0.2s;
 }
+
+/* ユーザー新規登録 */
+#admin_signup{
+  width: 100vw;
+  height: 100vh;
+  background-image: url("skipcafe_img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+}
+.admin_signup_box{
+  padding-top: 50px;
+}
+.user_new{
+  width: 920px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.user_new h2{
+  text-align: center;
+  font-size: 22px;
+  border-bottom: 1px solid #E7E7E7;
+  padding-bottom: 20px;
+}
+.user_new form{
+  margin-top: 0;
+}
+.user_new_field{
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.user_new_field span{
+  background-color: #666666;
+  padding: 4px 8px;
+  margin-left: 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  color: #fff;
+}
+.user_new_field input{
+  width: 100%;
+  margin-top: 8px;
+}
+.user_new_actions{
+  width: 380px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding-top: 25px;
+}
+.admin_signin{
+  width: 180px;
+  height: 42px;
+  padding-top: 12px;
+  color: #fff;
+  background-color: #707070;
+}
+.admin_new_submit{
+  width: 180px;
+  height: 42px;
+  text-align: center;
+  color: #fff;
+  background-color: #707070;
+}
+.admin_new_submit:hover,.admin_signin:hover{
+  opacity: 0.6;
+  transition: 0.2s;
+} */
+
 
 /* トップページ */
 .admin{
@@ -71,6 +145,9 @@
 }
 .admin_nav{
   padding: 15px 0;
+}
+.admin_nav li,.admin_nav span{
+  color: #333 !important;
 }
 .admin_nav_home{
   padding: 15px 0 15px 10px;
@@ -200,6 +277,34 @@
   transition: 0.2s;
 }
 
+/* ユーザー一覧 */
+#user_pagination{
+  text-align: center;
+  padding: 60px 0 40px;
+}
+.user_pagination span{
+  margin: 0 5px;
+  padding: 10px 8px 10px 13px;
+  border:1px solid #666666;
+  border-radius: 50%;
+}
+.user_pagination span:first-child{
+  margin-right: 20px;
+  border-radius: 20px !important;
+}
+.user_pagination span:last-child{
+  margin-left: 20px;
+  border-radius: 20px !important;
+}
+.user_pagination span:hover{
+  background-color: #666666;
+  color: #fff;
+  transition: 0.2s;
+}
+.user_pagination>.active>a {
+  background-color: #666666;
+}
+
 /* 新規登録 */
 .admin_form{
   width: 1180px;
@@ -220,6 +325,9 @@
 }
 
 /* お知らせ新規投稿 */
+.edit_contents{
+  height: 130% !important;
+}
 #admin_news_form{
   width: 77vw;
   margin: 30px auto 120px;
@@ -248,7 +356,7 @@
   background-color: #F7F7F7;
 }
 .admin_news_submit{
-  padding-bottom: 120px;
+  padding-bottom: 40px;
 }
 .admin_news_submit input{
   width: 160px;
@@ -286,8 +394,34 @@
 .admin_table td:last-child{
   border-right: none;
 }
-.news_table_logo{
+.table_logo{
   width: 24px;
+}
+#admin_pagination{
+  text-align: center;
+  padding: 60px 0 40px;
+}
+.admin_pagination span{
+  margin: 0 5px;
+  padding: 10px 8px 10px 13px;
+  border:1px solid #666666;
+  border-radius: 50%;
+}
+.admin_pagination span:first-child{
+  margin-right: 20px;
+  border-radius: 20px !important;
+}
+.admin_pagination span:last-child{
+  margin-left: 20px;
+  border-radius: 20px !important;
+}
+.admin_pagination span:hover{
+  background-color: #666666;
+  color: #fff;
+  transition: 0.2s;
+}
+.admin_pagination>.active>a {
+  background-color: #666666;
 }
 
 /* お知らせ編集 */
