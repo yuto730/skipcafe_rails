@@ -13,7 +13,11 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :users
+  resources :users do
+    collection do
+      get :user
+    end
+  end
   resources :admins do
     collection do
       get :news

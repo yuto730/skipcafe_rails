@@ -1,0 +1,52 @@
+<section class="admin">
+  <%= render "shared/left_nav" %>
+
+  <div id="admin_contents">
+    <%= render "shared/log_out" %>
+    <div class="admin_contents">
+      <div class="admin_title">
+        <h2>ユーザー一覧</h2>
+        <table id="admin_table">
+          <tr class="admin_table">
+            <th>No</th>
+            <th>ユーザー名</th>
+            <th>メールアドレス</th>
+            <th>名字</th>
+            <th>名前</th>
+            <th>編集</th>
+          </tr>
+          <% @users.each do |user| %>
+            <tr class="admin_table">
+              <td>
+                <%= user.id %>
+              </td>
+              <td>
+                <%= user.nickname %>
+              </td>
+              <td>
+                <%= user.email %>
+              </td>
+              <td>
+                <%= user.first_name %>
+              </td>
+              <td>
+                <%= user.last_name %>
+              </td>
+              <td>
+                <% if user.id == current_user.id %>
+                  <%= link_to (edit_user_registration_path) do %>
+                    <%= image_tag "edit.svg", class: "table_logo" %>
+                  <% end %>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        </table>
+        <ul id="user_pagination">
+          <li class="user_pagination"><%= paginate @users %></li>
+        </ul>
+      </div>
+    </div>
+    <%= render "shared/admin_footer" %>
+  </div>
+</section>
