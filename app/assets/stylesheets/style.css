@@ -505,7 +505,7 @@ textarea{
   transition: 0.2s;
 }
 
-{/* タブレット表示 */}
+/* タブレット表示 */
 @media screen and (max-width: 1024px){
   /* ヘッダー */
   .header_flex{
@@ -847,7 +847,7 @@ textarea{
   }
 }
 
-{/* スマホ表示 */}
+/* スマホ表示 */
 @media screen and (max-width: 480px){
   /* ヘッダー */
   .hamburger{
