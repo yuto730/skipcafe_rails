@@ -6,8 +6,11 @@
   </h1>
   <ul class="admin_nav">
     <li class="admin_nav_home">
+      <%= link_to(admins_path) do %>
       <i class="fas fa-laptop"></i>
-      <%= link_to 'Home', admins_path, class: "admin_content" %>
+      <span>Home</span>
+      <% end %>
+      <%# <%= link_to 'Home', admins_path, class: "admin_content" %>
     </li>
     <li class="admin_nav_text">
       <i class="fas fa-user"></i>

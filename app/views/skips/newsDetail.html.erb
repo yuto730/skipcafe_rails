@@ -18,7 +18,7 @@
       </h4>
       <%= image_tag @admin.image if @admin.image.attached? %>
       <p>
-        <%= safe_join(@admin.description.split("\n"),tag(:br)) %>
+        <%= @admin.content %>
       </p>
     </div>
 
@@ -38,7 +38,7 @@
                 <%= admin.title %>
               </h4>
               <p>
-                <%= safe_join(admin.description.truncate(48).split("\n"),tag(:br)) %>
+                <%= strip_tags(admin.content.to_s).gsub(/[\n]/,"").strip.truncate(60) %>
               </p>
             </div>
           <% end %>
