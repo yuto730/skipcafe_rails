@@ -120,7 +120,7 @@
               <%= admin.title.truncate(12) %>
             </h4>
             <p>
-              <%= safe_join(admin.description.truncate(48).split("\n"),tag(:br)) %>
+              <%= strip_tags(admin.content.to_s).gsub(/[\n]/,"").strip.truncate(60) %>
             </p>
           </div>
         <% end %>

@@ -8,7 +8,7 @@
         <h2>お知らせ投稿</h2>
         <%= form_with model: @admin, url: admins_path, local: true, id: "admin_news_form" do |f| %>
           <div class="admin_news_form">
-            <label>タイトル<span>必須</span></label><br>
+            <label>タイトル<span class="mandatory">必須</span></label><br>
             <%= f.text_field :title, placeholder: "最大入力20文字" %>
           </div>
 
@@ -18,12 +18,12 @@
           <%# </div> %>
 
           <div class="admin_news_form">
-            <label>サムネイル画像<span>必須</span></label><br>
+            <label>サムネイル画像<span class="mandatory">必須</span></label><br>
             <%= f.file_field :image, id:"news_image" %>
           </div>
           <div class="admin_news_form">
-            <label>お知らせ詳細<span>必須</span></label><br>
-            <%= f.text_area :description, placeholder: "最大入力1000文字", rows:"10" %>
+            <label>お知らせ詳細<span class="mandatory">必須</span></label><br>
+            <%= f.rich_text_area :content, placeholder: "最大入力1000文字" %>
           </div>
           <div class="admin_news_submit">
             <%= f.submit "登録" %>

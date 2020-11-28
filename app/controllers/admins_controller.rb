@@ -48,7 +48,7 @@ class AdminsController < ApplicationController
   private
 
   def admin_params
-    params.require(:admin).permit(:title, :image, :description).merge(user_id: current_user.id)
+    params.require(:admin).permit(:title, :image, :content).merge(user_id: current_user.id)
   end
 
   def set_admin
