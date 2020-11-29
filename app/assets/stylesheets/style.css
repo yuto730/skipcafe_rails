@@ -387,7 +387,7 @@ footer{
 
 /* Accessページ */
 #access{
-  background-image: url("skipcafe_img.jpg");
+  background-image: url("/images/skipcafe_img.jpg");
   background-repeat: no-repeat;
   background-size: 100vw;
 }

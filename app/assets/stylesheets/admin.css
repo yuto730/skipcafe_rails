@@ -2,7 +2,7 @@
 #admin_login{
   width: 100vw;
   height: 100vh;
-  background-image: url("skipcafe_img.jpg");
+  background-image: url("/images/skipcafe_img.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.8;
