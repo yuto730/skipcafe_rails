@@ -11,10 +11,9 @@ SkipカフェWebサイト
 
 
 # URL
-
+http://54.95.225.125/
 
 # テスト用アカウント
-
 
 # 目指した課題解決
 
@@ -28,6 +27,7 @@ SkipカフェWebサイト
 ## 機能
 
 - 自作CMS
+[![Image from Gyazo](https://i.gyazo.com/fc4c9d0d66a5dcae8d71d5c6c09d88f1.gif)](https://gyazo.com/fc4c9d0d66a5dcae8d71d5c6c09d88f1)
 - お問い合わせ
 - 各ページビュー
 
@@ -43,17 +43,23 @@ SkipカフェWebサイト
 ### 自作CMS
 
 - 管理画面で管理者の登録が出来るよう実装します。
+- 管理画面で管理者の編集が出来るよう実装します。
+[![Image from Gyazo](https://i.gyazo.com/c904eb85f89c4be2ee90c1b71b4f70d2.png)](https://gyazo.com/c904eb85f89c4be2ee90c1b71b4f70d2)
+- 管理画面で管理者の一覧が閲覧出来るよう実装します。
+[![Image from Gyazo](https://i.gyazo.com/7698b5b114acf69a1c16da5f2728e5e5.png)](https://gyazo.com/7698b5b114acf69a1c16da5f2728e5e5)
 - 管理者はお知らせを投稿出来るよう実装します。
+[![Image from Gyazo](https://i.gyazo.com/ad7b759c93073d5ec3548c4f3351718c.png)](https://gyazo.com/ad7b759c93073d5ec3548c4f3351718c)
 - お知らせの投稿には、画像,タイトル,詳細の全て必須にします。
 - お知らせの公開日時を指定出来るよう実装します。
 - 現在公開しているお知らせ一覧を管理画面から閲覧出来るよう実装します。
+[![Image from Gyazo](https://i.gyazo.com/434fc02847436bc077841f6fa0cf921d.png)](https://gyazo.com/434fc02847436bc077841f6fa0cf921d)
 - お知らせを編集出来るよう実装します。
+[![Image from Gyazo](https://i.gyazo.com/3338f58d4637629ed2d5a014094bfcb1.gif)](https://gyazo.com/3338f58d4637629ed2d5a014094bfcb1)
 - 管理画面のトップページには、Google Analyticsと連携をし、アクセス情報を確認出来るよう実装します。
 
 ### お問い合わせ
 
 - お問い合わせ内容が指定したメールアドレスに送信されるよう実装します。
-- 上記のURL以外は入力必須とします。
 
 ### 各ページビュー
 
@@ -61,14 +67,18 @@ SkipカフェWebサイト
 - スマートフォンで閲覧した際にナビゲーションをハンバーガーメニューに変更します。
 - ▼トップページ
 - ヘッダー,ファーストビュー,キャッチコピー,店舗の紹介動画,店舗のこだわり,お知らせ,フッターを表示します。
+[![Image from Gyazo](https://i.gyazo.com/6b350f61f6309ca6accf960d6d8c4812.gif)](https://gyazo.com/6b350f61f6309ca6accf960d6d8c4812)
 - ▼お知らせページ
 - お知らせ一覧ページでは最新のお知らせ8件を表示し、ページネーション機能を設けます。
 - お知らせ詳細ページでは、お知らせ詳細のほかに、最新のお知らせ2件を表示します。
+[![Image from Gyazo](https://i.gyazo.com/bda3f1e6b5971f9161176dce839b91bb.gif)](https://gyazo.com/bda3f1e6b5971f9161176dce839b91bb)
 - ▼アクセスページ
 - 営業日,営業時間,住所,電話番号,FAX番号,最寄駅,駐車場,GoogleMapを表示します。
 - GoogleMapではAPI連携をし、表示します。
+[![Image from Gyazo](https://i.gyazo.com/cf7990d5f37c0245b7ceffe434a5721b.gif)](https://gyazo.com/cf7990d5f37c0245b7ceffe434a5721b)
 - ▼お問い合わせページ
 - 名前,URL,メールアドレス,確認用メールアドレス,件名,本文の入力欄を設けます。
+[![Image from Gyazo](https://i.gyazo.com/ae6f6d3191493e4724a6eb215478785c.gif)](https://gyazo.com/ae6f6d3191493e4724a6eb215478785c)
 
 
 # 実装した機能についての説明
@@ -77,8 +87,10 @@ SkipカフェWebサイト
 
 
 # 実装予定の機能
+- 管理画面では、ユーザー関連をdeviseを用いて開発しており、現在はログインしている状態で新規管理者の追加が出来ないため、deviseをオーバーライドし、ログイン状態でも新規管理者登録ができるよう実装します。
 - 管理画面にはGoogle Analyticsと連携し、アクセス情報を閲覧できるよう実装します。
 - お知らせの公開日時を指定出来るよう実装します。
+- お問い合わせ内容が指定したメールアドレスに送信されるよう実装します。（現在はDBへの保存のみ完了しております。）
 
 
 # データベース設計
