@@ -67,14 +67,14 @@ http://54.95.225.125/
 - スマートフォンで閲覧した際にナビゲーションをハンバーガーメニューに変更します。
 - ▼トップページ
 - ヘッダー,ファーストビュー,キャッチコピー,店舗の紹介動画,店舗のこだわり,お知らせ,フッターを表示します。
-[![Image from Gyazo](https://i.gyazo.com/9fe07e98417cb551f96bb25c4e3678de.gif)](https://gyazo.com/9fe07e98417cb551f96bb25c4e3678de)
+![top](https://user-images.githubusercontent.com/72351740/100826943-dbada700-349e-11eb-8b2c-cd957e55f374.gif)
 - ▼お知らせページ
 - お知らせ一覧ページでは最新のお知らせ8件を表示し、ページネーション機能を設けます。
 - お知らせ詳細ページでは、お知らせ詳細のほかに、最新のお知らせ2件を表示します。
 [![Image from Gyazo](https://i.gyazo.com/bda3f1e6b5971f9161176dce839b91bb.gif)](https://gyazo.com/bda3f1e6b5971f9161176dce839b91bb)
 - ▼アクセスページ
 - 営業日,営業時間,住所,電話番号,FAX番号,最寄駅,駐車場,GoogleMapを表示します。
-[![Image from Gyazo](https://i.gyazo.com/375312e3d7c70d52b5f5f2a5f3ffad0a.gif)](https://gyazo.com/375312e3d7c70d52b5f5f2a5f3ffad0a)
+![access](https://user-images.githubusercontent.com/72351740/100826895-bde04200-349e-11eb-92f0-18043b88571a.gif)
 - ▼お問い合わせページ
 - 名前,URL,メールアドレス,確認用メールアドレス,件名,本文の入力欄を設けます。
 [![Image from Gyazo](https://i.gyazo.com/ae6f6d3191493e4724a6eb215478785c.gif)](https://gyazo.com/ae6f6d3191493e4724a6eb215478785c)
