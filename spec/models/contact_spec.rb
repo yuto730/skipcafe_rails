@@ -28,18 +28,22 @@ describe Contact do
         @contact.valid?
         expect(@contact.errors.full_messages).to include("Mail confirmation translation missing: ja.activerecord.errors.models.contact.attributes.mail_confirmation.blank")
       end
-      # it "mailとmail_confirmationが不一致では送信できない" do
-      #   @contact.mail = "skip@gmail.com"
-      #   @contact.mail_confirmation = "skipcafe@gmail.com"
-      #   @contact.valid?
-      #   expect(@contact.errors.full_messages).to include("")
-      #   binding.pry
-      # end
+      it "mailとmail_confirmationが不一致では送信できない" do
+        @contact.mail = "skip@gmail.com"
+        @contact.mail_confirmation = "skipcafe@gmail.com"
+        @contact.valid?
+        expect(@contact.errors.full_messages).to include("Mail confirmation translation missing: ja.activerecord.errors.models.contact.attributes.mail_confirmation.confirmation")
+        binding.pry
+      end
       it "messageが空では送信できない" do
         @contact.message = nil
         @contact.valid?
         expect(@contact.errors.full_messages).to include("Message translation missing: ja.activerecord.errors.models.contact.attributes.message.blank")
-        binding.pry
+      end
+      it "messageが1000文字以上だと送信できない" do
+        @contact.message = "あ" * 1001
+        @contact.valid?
+        expect(@contact.errors.full_messages).to include("Message translation missing: ja.activerecord.errors.models.contact.attributes.message.too_long")
       end
     end
 
