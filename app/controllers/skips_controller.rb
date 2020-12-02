@@ -32,7 +32,7 @@ class SkipsController < ApplicationController
   private
 
   def contact_params
-    params.require(:contact).permit(:name, :url, :mail, :encrypted_mail, :subject, :message)
+    params.require(:contact).permit(:name, :url, :mail, :mail_confirmation, :subject, :message)
   end
 
   def set_item
