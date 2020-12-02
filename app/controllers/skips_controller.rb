@@ -22,7 +22,7 @@ class SkipsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     if @contact.save
-      # ContactMailer.contact_mail(@contact).deliver
+      ContactMailer.contact_mail(@contact).deliver
       redirect_to root_path
     else
       redirect_to contact_skips_path

@@ -64,16 +64,16 @@ http://54.95.225.125/
 #### ▼お知らせページ
 - お知らせ一覧ページでは最新のお知らせ8件を表示し、ページネーション機能を設けます。
 - お知らせ詳細ページでは、お知らせ詳細のほかに、最新のお知らせ2件を表示します。
-#### アクセスページ
+#### ▼アクセスページ
 - 営業日,営業時間,住所,電話番号,FAX番号,最寄駅,駐車場,GoogleMapを表示します。
-#### お問い合わせページ
+#### ▼お問い合わせページ
 - 名前,URL,メールアドレス,確認用メールアドレス,件名,本文の入力欄を設けます。
 
 
 # 実装した機能についての説明
 
 ## トップページ
-[![Image from Gyazo](https://i.gyazo.com/3c1701833ea896bb43c7da5fd4062b94.gif)](https://gyazo.com/3c1701833ea896bb43c7da5fd4062b94)
+![3c1701833ea896bb43c7da5fd4062b94](https://user-images.githubusercontent.com/72351740/100831908-0b15e100-34aa-11eb-9942-6c0372615586.gif)
 
 <br>
 
@@ -83,7 +83,7 @@ http://54.95.225.125/
 <br>
 
 ## アクセスページ
-[![Image from Gyazo](https://i.gyazo.com/81d1ff5c720181767fd0b148b7517e00.gif)](https://gyazo.com/81d1ff5c720181767fd0b148b7517e00)
+![81d1ff5c720181767fd0b148b7517e00](https://user-images.githubusercontent.com/72351740/100831948-27198280-34aa-11eb-8444-c9601d099e0c.gif)
 
 <br>
 
