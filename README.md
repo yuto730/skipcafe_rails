@@ -164,5 +164,4 @@ http://54.95.225.125/
 | url               | string |                                |
 | mail              | string | null: false                    |
 | mail_confirmation | string | null: false                    |
-| subject           | string | null: false                    |
 | message           | text   | null: false                    |
