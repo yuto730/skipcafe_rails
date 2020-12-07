@@ -318,26 +318,30 @@ footer{
   text-align: center;
 }
 .pagination span{
-  margin: 0 5px;
-  padding: 10px 8px 10px 13px;
-  border:1px solid #666666;
+  display: inline-block;
+  margin: 0 3px;
+  padding: 10px 14px;
+  border: 1px solid #D7D7D7;
   border-radius: 50%;
 }
 .pagination span:first-child{
-  margin-right: 20px;
+  margin-right: 10px;
+  padding: 10px 18px;
   border-radius: 20px !important;
 }
 .pagination span:last-child{
-  margin-left: 20px;
+  margin-left: 10px;
+  padding: 10px 18px;
   border-radius: 20px !important;
 }
 .pagination span:hover{
-  background-color: #666666;
-  color: #fff;
+  background-color: #D7D7D7;
+  color: #333;
   transition: 0.2s;
 }
-.pagination>.active>a {
-  background-color: #666666;
+.pagination .current{
+  background-color: #D7D7D7;
+  color: #333;
 }
 
 /* ニュース詳細ページ */
@@ -886,7 +890,7 @@ textarea{
     position: fixed;
     background-color: #e8e8eb;
     width: 100vw;
-    height: 100vh;
+    height: 50vh;
     top: 0;
     opacity: .9;
     transition: .3s;
@@ -899,7 +903,7 @@ textarea{
   #nav ul{
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
+    margin-top: 60px;
   }
   #nav a{
     display: inline-block;
@@ -991,7 +995,7 @@ textarea{
 
   /* こだわり */
   #about{
-    margin-top: 80px;
+    margin-top: 60px;
   }
   #about h3{
     font-size: 24px;
@@ -1019,7 +1023,7 @@ textarea{
   }
   .cafe_details_sp h3{
     font-size: 18px;
-    margin-top: 30px;
+    margin-top: 15px;
   }
   .cafe_details_sp p{
     font-size: 14px;
@@ -1043,7 +1047,7 @@ textarea{
   .goods_sp{
     display: block;
     width: 100vw;
-    margin: 60px auto 0;
+    margin: 40px auto 0;
   }
   .goods_details_sp{
     width: 96vw;
@@ -1055,7 +1059,7 @@ textarea{
   }
   .goods_details_sp h3{
     font-size: 18px;
-    margin-top: 30px;
+    margin-top: 15px;
     text-align: right;
   }
   .goods_details_sp p{
@@ -1215,19 +1219,25 @@ textarea{
     width: 80vw;
     margin: 0 auto;
   }
+  .trix-content{
+    width: 80vw !important;
+    margin-bottom: 40px;
+  }
   .news_details time{
     font-size: 14px;
   }
   .news_details h4{
     font-size: 20px;
-    margin: 8px 0 20px;
+    margin: 6px 0 10px;
   }
   .news_details img{
-    width: 80vw;
+    width: 300px;
+    height: 169px;
+    object-fit: cover;
   }
   .news_details p{
     width: 80vw;
-    margin: 20px 0 40px;
+    margin: 15px 0;
     font-size: 14px;
   }
   .news_nav{
@@ -1238,7 +1248,9 @@ textarea{
     margin: 0 8px;
   }
   .news_nav_img img{
-    width: 45vw;
+    width: 168px;
+    height: 100px;
+    object-fit: cover;
   }
   .news_details_info{
     padding: 8px;

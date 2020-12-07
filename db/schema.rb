@@ -55,7 +55,6 @@ ActiveRecord::Schema.define(version: 2020_11_28_071155) do
     t.string "name", null: false
     t.string "url"
     t.string "mail", null: false
-    t.string "mail_confirmation", null: false
     t.text "message", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

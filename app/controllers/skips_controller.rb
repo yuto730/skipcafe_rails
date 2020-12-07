@@ -5,7 +5,7 @@ class SkipsController < ApplicationController
   end
 
   def news
-    @admins = Admin.order("created_at DESC").page(params[:page]).per(3)
+    @admins = Admin.order("created_at DESC").page(params[:page]).per(1)
   end
 
   def newsDetail
@@ -32,7 +32,7 @@ class SkipsController < ApplicationController
   private
 
   def contact_params
-    params.require(:contact).permit(:name, :url, :mail, :mail_confirmation, :subject, :message)
+    params.require(:contact).permit(:name, :url, :mail, :mail_confirmation, :message)
   end
 
   def set_item

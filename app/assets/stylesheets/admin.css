@@ -143,40 +143,66 @@
   padding: 20px 0;
   text-align: center;
 }
-.admin_nav{
+
+
+.sidebar-menu{
   padding: 15px 0;
 }
-.admin_nav li,.admin_nav span{
+.sidebar-menu li, .sidebar-menu span{
   color: #333 !important;
 }
-.admin_nav_home:hover{
+.menu_home:hover{
   background-color: #D7D7D7;
   transition: 0.4s;
 }
-.admin_nav_home a{
+.menu_home a{
   display: block;
   padding: 15px 0 15px 10px;
 }
-.admin_nav_link:hover{
+#dropdown_user_btn, #dropdown_news_btn{
+  display: block;
+  width: 100%;
+  padding: 15px 0 15px 10px;
+}
+#dropdown_user_btn:hover, #dropdown_news_btn:hover{
   background-color: #D7D7D7;
   transition: 0.4s;
 }
-.admin_nav_link a{
-  display: block;
-  padding: 15px 0px 15px 10px;
-}
-.admin_nav_text{
-  padding: 15px 0 15px 10px;
-  background-color: #D7D7D7;
-}
-.fa-angle-right{
+.fa-chevron-left{
   position: absolute;
   right: 30px;
-  transform: rotate(90deg);
-}
-.admin_content{
   font-size: 14px;
 }
+.treeview-menu li:hover{
+  background-color: #D7D7D7;
+  transition: 0.4s;
+}
+.treeview-menu li a{
+  display: block;
+  padding: 15px 0px 15px 10px;
+  font-size: 14px;
+}
+
+.treeview-menu {
+  display: none;
+}
+#dropdown_user_btn.is-open + .treeview-menu {
+  display: block;
+  z-index: 4;
+}
+#dropdown_news_btn.is-open + .treeview-menu {
+  display: block;
+  z-index: 4;
+}
+.transform .fa-chevron-left{
+  transform: rotate(-90deg);
+  transition: 0.1s;
+}
+
+.sidebar-menu li a.current{
+  background-color: #D7D7D7;
+}
+
 
 /* 右コンテンツ */
 #admin_contents{
@@ -228,6 +254,7 @@
   padding: 20px;
   border-top: 4px solid #E7E7E7;
   background-color: #fff;
+  text-align: left;
 }
 
 /* ユーザー情報編集 */

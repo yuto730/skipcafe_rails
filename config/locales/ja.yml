@@ -4,8 +4,6 @@ ja:
       default: "%Y%m月%d日"
   views:
     pagination:
-      # first: "&laquo; 最初"
-      # last: "最後 &raquo;"
-      previous: "&lsaquo; 前へ"
-      next: "次へ &rsaquo;"
+      previous: "前へ"
+      next: "次へ"
       # truncate: "..."

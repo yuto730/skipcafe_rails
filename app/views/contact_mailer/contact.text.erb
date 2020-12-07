@@ -1,8 +1,12 @@
---------------------------
-<%# お名前： <%= @contact.name %>
+Webサイトからお問い合わせがありました。
 
-<%# お問い合わせ内容： <%= @contact.message %>
-お名前: <%= @contact.name %>
+--------------------------
+
+名前: <%= @contact.name %>
+URL: <%= @contact.url %>
 メールアドレス: <%= @contact.mail %>
-お問い合わせ内容:<%= @contact.message %>
+
+お問い合わせ内容:
+<%= @contact.message %>
+
 --------------------------

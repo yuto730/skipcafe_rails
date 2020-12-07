@@ -4,34 +4,50 @@
       <%= image_tag "logo.png", class: "admin_logo" %>
     <% end %>
   </h1>
-  <ul class="admin_nav">
-    <li class="admin_nav_home">
-      <%= link_to(admins_path) do %>
-      <i class="fas fa-laptop"></i>
-      <span>Home</span>
-      <% end %>
-    </li>
-    <li class="admin_nav_text">
-      <i class="fas fa-user"></i>
-      <span>ユーザー管理</span>
-      <i class="fas fa-angle-right"></i>
-    </li>
-    <li class="admin_nav_link">
-      <%= link_to '- ユーザー情報の編集', edit_user_registration_path, class: "admin_content" %>
-    </li>
-    <li class="admin_nav_link">
-      <%= link_to '- ユーザー一覧', user_users_path, class: "admin_content" %>
-    </li>
-    <li class="admin_nav_text">
-      <i class="fas fa-file-alt"></i>
-      <span>お知らせ管理</span>
-      <i class="fas fa-angle-right"></i>
-    </li>
-    <li class="admin_nav_link">
-      <%= link_to '- お知らせ新規投稿', new_admin_path, class: "admin_content" %>
-    </li>
-    <li class="admin_nav_link">
-      <%= link_to '- お知らせ一覧', news_admins_path, class: "admin_content" %>
-    </li>
-  </ul>
+  <section>
+    <ul class="sidebar-menu">
+      <li class="menu_home">
+        <%= link_to(admins_path) do %>
+          <i class="fas fa-laptop"></i>
+          <span>Home</span>
+        <% end %>
+      </li>
+
+      <li class="treeview">
+        <button id="dropdown_user_btn">
+          <i class="fas fa-user"></i>
+          <span>ユーザー管理</span>
+          <span class="pull-right-container">
+            <i class="fas fa-chevron-left"></i>
+          </span>
+        </button>
+        <ul class="treeview-menu">
+          <li id="user_edit">
+            <%= link_to '- ユーザー情報の編集', edit_user_registration_path, class: "admin_content" %>
+          </li>
+          <li id="user_list">
+            <%= link_to '- ユーザー一覧', user_users_path, class: "admin_content" %>
+          </li>
+        </ul>
+      </li>
+
+      <li class="treeview">
+        <button id="dropdown_news_btn">
+          <i class="fas fa-file-alt"></i>
+          <span>お知らせ管理</span>
+          <span class="pull-right-container">
+            <i class="fas fa-chevron-left"></i>
+          </span>
+        </button>
+        <ul class="treeview-menu">
+          <li id="news_new">
+            <%= link_to '- お知らせ新規投稿', new_admin_path, class: "admin_content" %>
+          </li>
+          <li id="news_list">
+            <%= link_to '- お知らせ一覧', news_admins_path, class: "admin_content" %>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
 </nav>
