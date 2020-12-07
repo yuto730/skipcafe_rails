@@ -4,9 +4,9 @@
 .header_flex{
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 1200px;
   margin: 0 auto;
-  align-items: center;
   padding-top: 30px;
 }
 .logo{
@@ -313,7 +313,6 @@ footer{
   font-size: 14px;
   line-height: 1.4em;
 }
-
 #pagination{
   text-align: center;
 }
@@ -359,11 +358,6 @@ footer{
   width: 620px;
   height: 370px;
   object-fit: cover;
-}
-.news_details p{
-  width: 620px;
-  margin-top: 20px;
-  line-height: 1.6em;
 }
 .news_details_contents{
   width: 280px;
@@ -477,8 +471,8 @@ iframe{
   margin-left: 3px;
 }
 input,textarea{
-  width:650px;
-  padding:0 10px;
+  width: 650px;
+  padding: 0 10px;
   border: 1px solid #707070;
 }
 input::placeholder,textarea::placeholder {
@@ -528,7 +522,6 @@ textarea{
 
   /* ファーストビュー */
   .views{
-    width: 100vw;
     height: 500px;
   }
   .views img{
@@ -584,6 +577,7 @@ textarea{
 
   /* カフェ */
   .cafe{
+    align-items: center;
     margin-top: 40px;
   }
   .cafe_details{
@@ -591,7 +585,7 @@ textarea{
     margin: 0 10px;
   }
   .cafe_details h2{
-    font-size: 54px;
+    font-size: 48px;
   }
   .cafe_details h3{
     font-size: 24px;
@@ -602,18 +596,19 @@ textarea{
     margin-top: 10px;
   }
   .cafe_img img{
-    width: 62vw;
-    height: 420px;
+    width: 58vw;
+    height: 26vh;
     object-fit: cover;
   }
 
   /* 雑貨 */
   .goods{
+    align-items: center;
     margin-top: 60px;
   }
   .goods_img img{
-    width: 62vw;
-    height: 420px;
+    width: 58vw;
+    height: 26vh;
     object-fit: cover;
   }
   .goods_details{
@@ -621,7 +616,7 @@ textarea{
     margin: 0 10px;
   }
   .goods_details h2{
-    font-size: 54px;
+    font-size: 48px;
   }
   .goods_details h3{
     font-size: 24px;
@@ -657,6 +652,7 @@ textarea{
   }
   .top_news_img img{
     width: 240px;
+    height: 143px;
   }
   .top_news_info{
     padding: 8px;
@@ -694,9 +690,6 @@ textarea{
   .kasou_midashi{
     height: 30vh;
   }
-  .kasou_midashi h2{
-    font-size: 60px;
-  }
   .kasou_midashi p{
     margin-top: 20px;
     letter-spacing: .4em;
@@ -711,14 +704,10 @@ textarea{
     margin: 30px auto;
   }
   .news_contents{
-    width: 280px;
     margin: 0 8px 40px 8px;
   }
   .news_info{
     padding: 8px;
-  }
-  .news_info time{
-    font-size: 14px;
   }
   .news_info h4{
     padding: 8px 0;
@@ -728,19 +717,20 @@ textarea{
     padding: 8px 0;
     font-size: 18px;
   }
-  .pagination{
-    margin-right: 15px;
-  }
 
   /* ニュース詳細ページ */
   #news_details{
     display: block;
     justify-content: normal;
-    width: 98vw;
+    width: 100vw;
   }
   .news_details{
-    width: 80vw;
+    width: 60vw;
     margin: 0 auto;
+  }
+  .trix-content{
+    width: 60vw !important;
+    margin-bottom: 60px;
   }
   .news_details time{
     font-size: 16px;
@@ -750,12 +740,8 @@ textarea{
     margin: 10px 0 20px;
   }
   .news_details img{
-    width: 80vw;
-  }
-  .news_details p{
-    width: 80vw;
-    margin: 20px 0 60px;
-    font-size: 20px;
+    width: 600px;
+    height: 337px;
   }
   .news_nav{
     display: flex;
@@ -765,10 +751,7 @@ textarea{
     margin: 0 20px 40px;
   }
   .news_details_info{
-    padding: 8px;;
-  }
-  .news_details_info time{
-    font-size: 14px;
+    padding: 8px;
   }
   .news_details_info h4{
     padding: 8px 0;
@@ -776,7 +759,7 @@ textarea{
   }
   .news_details_info p{
     padding: 8px 0;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   /* Accessページ */
@@ -839,10 +822,6 @@ textarea{
   input{
     height: 40px;
   }
-  textarea{
-    height: 150px;
-    padding: 10px;
-  }
   .submit{
     margin-top: 40px;
   }
@@ -896,18 +875,17 @@ textarea{
     transition: .3s;
     z-index: 10;
   }
+  #nav ul{
+    flex-direction: column;
+    margin-top: 60px;
+  }
   #nav li{
     border-right: none;
     text-align: center;
   }
-  #nav ul{
-    display: flex;
-    flex-direction: column;
-    margin-top: 60px;
-  }
   #nav a{
     display: inline-block;
-    margin: 30px 0;
+    margin: 20px 0;
     font-size: 18px;
     letter-spacing: .1em;
   }
@@ -924,15 +902,9 @@ textarea{
     transform: rotate(-45deg);
   }
   .header_flex{
-    display: block;
-    justify-content: space-around;
     width: 100vw;
-    margin: 0 auto;
-    align-items: normal;
-    padding-top: 20px;
   }
-  .header_flex img{
-    width: 60px;
+  .logo{
     margin-left: 20px;
   }
   .instagram{
@@ -953,7 +925,6 @@ textarea{
     letter-spacing: 0.6em;
   }
   .views{
-    width: 100vw;
     height: 40vh;
     background: transparent;
     margin-top: 20px;
@@ -1093,35 +1064,24 @@ textarea{
   }
   .top_news_flex{
     display: block;
-    justify-content: normal;
-    width: 96vw;
-    margin: 40px auto;
   }
   .top_news_contents{
-    width: 60vw;
     margin: 0 auto 20px;
   }
   .top_news_contents:last-child{
     margin: 0 auto;
-  }
-  .top_news_info{
-    padding: 8px;
-  }
-  .top_news_info time{
-    font-size: 14px;
   }
   .top_news_info h4{
     padding: 6px 0;
     font-size: 16px;
   }
   .top_news_info p{
-    padding: 6px 0;
+    padding: 0;
     font-size: 14px;
   }
   .more_news{
     width: 220px;
     padding: 16px 0;
-    margin: 40px auto 10px;
   }
   .more_news a{
     font-size: 14px;
@@ -1131,11 +1091,7 @@ textarea{
   footer{
     margin-top: 40px;
   }
-  footer img{
-    width: 15vw;
-  }
   #copyright{
-    margin: 15px 0 30px 0;
     font-size: 12px;
   }
 
@@ -1160,64 +1116,44 @@ textarea{
   /* News一覧ページ */
   .news_flex{
     display: block;
-    justify-content: normal;
-    width: 96vw;
     margin: 40px auto;
   }
   .news_contents{
-    width: 60vw;
+    width: 240px;
     margin: 0 auto 20px;
   }
   .news_img img{
-    width: 60vw;
-  }
-  .news_info{
-    padding: 8px;
+    width: 240px;
+    height: 143px;
   }
   .news_info time{
-    font-size: 14px;
+    font-size: 12px;
   }
   .news_info h4{
     padding: 6px 0;
     font-size: 16px;
   }
   .news_info p{
-    padding: 6px 0;
+    padding: 0;
     font-size: 14px;
   }
-  #pagination{
-    display: flex;
-    width: 100vw;
-    justify-content: center;
+  .pagination span{
+    padding: 8px 12px;
   }
-  .pagination:first-child{
-    margin-right: 30px;
+  .pagination span:first-child{
+    margin-right: 6px;
+    padding: 8px 16px;
+    border-radius: 18px !important;
   }
-  .pagination:last-child{
-    margin: 0 0 0 20px;
-  }
-  .pagination{
-    margin-right: 10px;
-  }
-  .pagination a:first-child{
-    border-radius: 20px;
-  }
-  .pagination a:last-child{
-    border-radius: 20px;
-  }
-  .pagination a{
-    padding: 8px 11px;
+  .pagination span:last-child{
+    margin-left: 6px;
+    padding: 8px 16px;
+    border-radius: 18px !important;
   }
 
   /* ニュース詳細ページ */
-  #news_details{
-    display: block;
-    justify-content: normal;
-    width: 96vw;
-  }
   .news_details{
     width: 80vw;
-    margin: 0 auto;
   }
   .trix-content{
     width: 80vw !important;
@@ -1233,38 +1169,32 @@ textarea{
   .news_details img{
     width: 300px;
     height: 169px;
-    object-fit: cover;
-  }
-  .news_details p{
-    width: 80vw;
-    margin: 15px 0;
-    font-size: 14px;
   }
   .news_nav{
     width: 98vw;
+    margin: 0 auto;
   }
   .news_details_contents{
-    width: 45vw;
+    width: 168px;
     margin: 0 8px;
   }
   .news_nav_img img{
     width: 168px;
     height: 100px;
-    object-fit: cover;
   }
   .news_details_info{
-    padding: 8px;
+    padding: 5px;
   }
   .news_details_info time{
-    font-size: 12px;
+    font-size: 10px;
   }
   .news_details_info h4{
-    padding: 8px 0;
-    font-size: 16px;
+    padding: 5px 0;
+    font-size: 14px;
   }
   .news_details_info p{
-    padding: 8px 0;
-    font-size: 14px;
+    padding: 0;
+    font-size: 12px;
   }
 
   /* Accessページ */
@@ -1272,18 +1202,15 @@ textarea{
     padding-top: 200px;
   }
   .access_box{
-    display: block;
     width: 100vw;
-    height: 750px;
+    height: 770px;
   }
   #access_details{
     width: 96vw;
-    margin: 0 auto;
     padding-top: 30px;
   }
   #access_details h3{
     font-size: 18px;
-    padding-bottom: 20px;
   }
   .access_details{
     margin-top: 8px;
@@ -1297,7 +1224,6 @@ textarea{
   }
   #map{
     width: 96vw;
-    margin: 40px auto 0;
   }
   iframe{
     width: 96vw;
