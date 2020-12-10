@@ -32,7 +32,9 @@
   </div>
 
   <ul id="pagination">
-    <li class="pagination"><%= paginate @admins %></li>
+    <li class="pagination">
+      <%= paginate @admins, window: 3, outer_window: 1 %>
+    </li>
   </ul>
 </section>
 

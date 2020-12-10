@@ -215,16 +215,52 @@
 
 /* ヘッダー */
 .admin_header{
-  text-align: end;
-  padding: 35px 40px;
   background-color: #fff;
 }
-.log_out{
-  padding: 28px 4px;
-  border-radius: 50%;
-  background-color: #E7E7E7;
-  font-size: 12px;
+.admin_name{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px;
 }
+#admin_name{
+  cursor: pointer;
+  padding: 15px 10px;
+}
+#admin_name:hover{
+  background-color: #E7E7E7;
+}
+#admin_name img{
+  margin-right: 5px;
+  vertical-align: middle;
+}
+#admin_dropdown {
+  display: none;
+  width: 200px;
+  position: absolute;
+  top: 55px;
+  right: 30px;
+}
+.admin_dropdown{
+  background-color: #E7E7E7;
+  border-bottom: 1px solid #D7D7D7;
+}
+.admin_dropdown a{
+  display: block;
+  padding: 3px 20px;
+  line-height: 40px;
+  text-align: left;
+}
+.fa-edit, .fa-sign-out-alt{
+  margin-right: 10px;
+}
+.admin-open{
+  background-color: #E7E7E7;
+}
+#admin_name.admin-open + #admin_dropdown {
+  display: block;
+  z-index: 4;
+}
+
 /* コンテンツ */
 .admin_contents{
   width: 80vw;

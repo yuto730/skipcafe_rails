@@ -2,7 +2,7 @@
   <%= render "shared/left_nav" %>
 
   <div id="admin_contents">
-    <%= render "shared/log_out" %>
+    <%= render "shared/admin_header" %>
     <div class="admin_title">
       <h2>ユーザー情報編集</h2>
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>

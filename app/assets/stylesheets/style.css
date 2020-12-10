@@ -869,7 +869,7 @@ textarea{
     position: fixed;
     background-color: #e8e8eb;
     width: 100vw;
-    height: 50vh;
+    height: 55vh;
     top: 0;
     opacity: .9;
     transition: .3s;
@@ -925,13 +925,13 @@ textarea{
     letter-spacing: 0.6em;
   }
   .views{
-    height: 40vh;
+    height: 30vh;
     background: transparent;
     margin-top: 20px;
   }
   .views img{
     width: 100vw;
-    height: 40vh;
+    height: 30vh;
   }
 
   /* キャッチコピー */
@@ -1203,7 +1203,7 @@ textarea{
   }
   .access_box{
     width: 100vw;
-    height: 770px;
+    height: 750px;
   }
   #access_details{
     width: 96vw;
