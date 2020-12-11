@@ -5,7 +5,7 @@ class SkipsController < ApplicationController
   end
 
   def news
-    @admins = Admin.order("created_at DESC").page(params[:page]).per(1)
+    @admins = Admin.order("created_at DESC").page(params[:page]).per(8)
   end
 
   def newsDetail

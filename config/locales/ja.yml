@@ -6,4 +6,4 @@ ja:
     pagination:
       previous: "前へ"
       next: "次へ"
-      truncate: "・"
+      truncate: "..."

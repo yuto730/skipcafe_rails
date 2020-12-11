@@ -147,10 +147,12 @@ http://54.95.225.125/
 
 ## admins テーブル
 
-| Column      | Type       | Options                        |
-| ----------- | ---------- | ------------------------------ |
-| title       | string     | null: false                    |
-| user        | references | null: false, foreign_key: true |
+| Column   | Type       | Options                        |
+| -------- | ---------- | ------------------------------ |
+| title    | string     | null: false                    |
+| start_on | date       |                                |
+| end_on   | date       |                                |
+| user     | references | null: false, foreign_key: true |
 
 ### Association
 

@@ -6,6 +6,6 @@ class UsersController < ApplicationController
   end
 
   def user
-    @users = User.all.page(params[:page]).per(1)
+    @users = User.all.page(params[:page]).per(5)
   end
 end

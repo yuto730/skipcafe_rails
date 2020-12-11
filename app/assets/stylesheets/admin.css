@@ -406,6 +406,14 @@
   font-size: 12px;
   color: #fff;
 }
+.admin_news_date{
+  display: flex;
+  justify-content: space-between;
+  width: 820px;
+}
+.admin_news_date input{
+  width: 380px !important;
+}
 .admin_news_form input,.admin_news_form textarea{
   margin-top: 15px;
   width: 820px;
@@ -494,6 +502,14 @@
 }
 .news_edit_form label{
   font-size: 17px;
+}
+.news_edit_date{
+  display: flex;
+  justify-content: space-between;
+  width: 820px;
+}
+.news_edit_date input{
+  width: 380px !important;
 }
 .news_edit_form input,.news_edit_form textarea{
   margin-top: 15px;
