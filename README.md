@@ -88,7 +88,7 @@ http://54.95.225.125/
 <br>
 
 ## お問い合わせページ
-[![Image from Gyazo](https://i.gyazo.com/ae6f6d3191493e4724a6eb215478785c.gif)](https://gyazo.com/ae6f6d3191493e4724a6eb215478785c)
+[![Image from Gyazo](https://i.gyazo.com/0935820955fa06c2ff7f5e518c625c3b.gif)](https://gyazo.com/0935820955fa06c2ff7f5e518c625c3b)
 
 <br>
 
