@@ -67,18 +67,18 @@ http://54.95.225.125/
 #### ▼アクセスページ
 - 営業日,営業時間,住所,電話番号,FAX番号,最寄駅,駐車場,GoogleMapを表示します。
 #### ▼お問い合わせページ
-- 名前,URL,メールアドレス,確認用メールアドレス,件名,本文の入力欄を設けます。
+- 名前,URL,メールアドレス,確認用メールアドレス,お問い合わせ内容の入力欄を設けます。
 
 
 # 実装した機能についての説明
 
 ## トップページ
-![3c1701833ea896bb43c7da5fd4062b94](https://user-images.githubusercontent.com/72351740/100831908-0b15e100-34aa-11eb-9942-6c0372615586.gif)
+[![Image from Gyazo](https://i.gyazo.com/fa1a8b33fc138eb13756a4eb7e85d063.gif)](https://gyazo.com/fa1a8b33fc138eb13756a4eb7e85d063)
 
 <br>
 
 ## お知らせページ
-[![Image from Gyazo](https://i.gyazo.com/bda3f1e6b5971f9161176dce839b91bb.gif)](https://gyazo.com/bda3f1e6b5971f9161176dce839b91bb)
+[![Image from Gyazo](https://i.gyazo.com/e0e072ff7e89647a1721e1fb5d19e47f.gif)](https://gyazo.com/e0e072ff7e89647a1721e1fb5d19e47f)
 
 <br>
 
@@ -93,39 +93,38 @@ http://54.95.225.125/
 <br>
 
 ## 管理画面
-[![Image from Gyazo](https://i.gyazo.com/fc4c9d0d66a5dcae8d71d5c6c09d88f1.gif)](https://gyazo.com/fc4c9d0d66a5dcae8d71d5c6c09d88f1)
+[![Image from Gyazo](https://i.gyazo.com/b4f5f6af63ada974627dd0841c467c8b.png)](https://gyazo.com/b4f5f6af63ada974627dd0841c467c8b)
 
 <br>
 
 ## 【管理画面】管理者の編集ができます。
-[![Image from Gyazo](https://i.gyazo.com/c904eb85f89c4be2ee90c1b71b4f70d2.png)](https://gyazo.com/c904eb85f89c4be2ee90c1b71b4f70d2)
+[![Image from Gyazo](https://i.gyazo.com/f336096e63013f275f80e96dd836ac62.png)](https://gyazo.com/f336096e63013f275f80e96dd836ac62)
 
 <br>
 
 ## 【管理画面】管理者一覧を閲覧できます。
-[![Image from Gyazo](https://i.gyazo.com/7698b5b114acf69a1c16da5f2728e5e5.png)](https://gyazo.com/7698b5b114acf69a1c16da5f2728e5e5)
+[![Image from Gyazo](https://i.gyazo.com/f90291e126ba761e8cc56d41040a52f0.png)](https://gyazo.com/f90291e126ba761e8cc56d41040a52f0)
 
 <br>
 
 ## 【管理画面】お知らせを投稿できます。
-[![Image from Gyazo](https://i.gyazo.com/ad7b759c93073d5ec3548c4f3351718c.png)](https://gyazo.com/ad7b759c93073d5ec3548c4f3351718c)
+[![Image from Gyazo](https://i.gyazo.com/54edd949f06d76160048c666757272f7.gif)](https://gyazo.com/54edd949f06d76160048c666757272f7)
 
 <br>
 
 ## 【管理画面】お知らせ一覧を閲覧できます。
-[![Image from Gyazo](https://i.gyazo.com/434fc02847436bc077841f6fa0cf921d.png)](https://gyazo.com/434fc02847436bc077841f6fa0cf921d)
+[![Image from Gyazo](https://i.gyazo.com/d2680e3e5661dd46ec9c4cfeda130fdd.png)](https://gyazo.com/d2680e3e5661dd46ec9c4cfeda130fdd)
 
 <br>
 
 ## 【管理画面】お知らせ一を編集できます。
-[![Image from Gyazo](https://i.gyazo.com/3338f58d4637629ed2d5a014094bfcb1.gif)](https://gyazo.com/3338f58d4637629ed2d5a014094bfcb1)
+[![Image from Gyazo](https://i.gyazo.com/a18e189ed12e1ffb1d6b3f6764d03927.gif)](https://gyazo.com/a18e189ed12e1ffb1d6b3f6764d03927)
 
 <br>
 
 # 実装予定の機能
 - 管理画面では、ユーザー関連をdeviseを用いて開発しており、現在はログインしている状態で新規管理者の追加が出来ないため、deviseをオーバーライドし、ログイン状態でも新規管理者登録ができるよう実装します。
 - 管理画面にはGoogle Analyticsと連携し、アクセス情報を閲覧できるよう実装します。
-- お知らせの公開日時を指定出来るよう実装します。
 - お問い合わせ内容が指定したメールアドレスに送信されるよう実装します。（現在はDBへの保存のみ完了しております。）
 
 
@@ -150,8 +149,7 @@ http://54.95.225.125/
 | Column   | Type       | Options                        |
 | -------- | ---------- | ------------------------------ |
 | title    | string     | null: false                    |
-| start_on | date       |                                |
-| end_on   | date       |                                |
+| start_on | date       | null: false                    |
 | user     | references | null: false, foreign_key: true |
 
 ### Association

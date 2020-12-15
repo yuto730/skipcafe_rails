@@ -15,18 +15,6 @@ class AdminsController < ApplicationController
     else
       render :new
     end
-
-    difference = (@admin.start_on - Date.today).to_i
-    unless difference >= 1
-      render :new
-      return
-    end
-
-    difference = (@admin.end_on - @admin.start_on).to_i
-    unless difference >= 0
-      render :new
-      return
-    end
   end
 
   def news
@@ -46,18 +34,6 @@ class AdminsController < ApplicationController
     else
       render :edit
     end
-
-    difference = (@admins.start_on - Date.today).to_i
-    unless difference >= 1
-      render :edit
-      return
-    end
-
-    difference = (@admins.end_on - @admins.start_on).to_i
-    unless difference >= 0
-      render :edit
-      return
-    end
   end
 
   def destroy
@@ -72,7 +48,7 @@ class AdminsController < ApplicationController
   private
 
   def admin_params
-    params.require(:admin).permit(:title, :image, :content).merge(user_id: current_user.id)
+    params.require(:admin).permit(:title, :start_on, :image, :content).merge(user_id: current_user.id)
   end
 
   def set_admin

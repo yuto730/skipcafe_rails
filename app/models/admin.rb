@@ -6,6 +6,7 @@ class Admin < ApplicationRecord
 
   with_options presence: true do
     validates :title, length: { maximum: 20 }
+    validates :start_on
     validates :image
     validates :content
   end

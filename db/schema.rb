@@ -45,8 +45,7 @@ ActiveRecord::Schema.define(version: 2020_11_28_071155) do
 
   create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
-    t.date "start_on"
-    t.date "end_on"
+    t.date "start_on", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

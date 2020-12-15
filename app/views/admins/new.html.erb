@@ -12,16 +12,9 @@
             <%= f.text_field :title, placeholder: "最大入力20文字" %>
           </div>
 
-          <div class="admin_news_date">
-            <div class="admin_news_form">
-              <label>掲載開始日</label><br>
-              <%= f.date_field_tag 'admin[start_on]' %>
-            </div>
-
-            <div class="admin_news_form">
-              <label>掲載終了日</label><br>
-              <%= f.date_field_tag 'admin[end_on]' %>
-            </div>
+          <div class="news_edit_form admin_news_date">
+            <label>掲載開始日<span class="mandatory">必須</span></label><br>
+            <%= f.date_field :start_on %>
           </div>
 
           <div class="admin_news_form">

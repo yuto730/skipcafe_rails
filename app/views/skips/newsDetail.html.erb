@@ -11,7 +11,7 @@
   <div id="news_details">
     <div class="news_details">
       <time>
-        <%= @admin.created_at.strftime("%Y.%m.%d") %>
+        <%= @admin.start_on.strftime("%Y.%m.%d") %>
       </time>
       <h4>
         <%= @admin.title %>
@@ -24,7 +24,7 @@
 
     <!-- ニュース右ナビゲーション -->
     <div class="news_nav">
-      <% @admins.first(2).each do |admin| %>
+      <% @admin_news.first(2).each do |admin| %>
         <div class="news_details_contents">
           <%= link_to newsDetail_skip_path(admin.id) do %>
             <div class="news_img news_nav_img">
@@ -32,7 +32,7 @@
             </div>
             <div class="news_details_info">
               <time>
-                <%= admin.created_at.strftime("%Y.%m.%d") %>
+                <%= admin.start_on.strftime("%Y.%m.%d") %>
               </time>
               <h4>
                 <%= admin.title %>

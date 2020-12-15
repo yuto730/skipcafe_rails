@@ -9,7 +9,7 @@
 <!-- ニュース一覧 -->
 <section>
   <div class="news_flex">
-    <% @admins.each do |admin| %>
+    <% @admin_news.first(8).each do |admin| %>
       <div class="news_contents">
         <%= link_to newsDetail_skip_path(admin.id) do %>
           <div class="news_img">
@@ -17,7 +17,7 @@
           </div>
           <div class="news_info">
             <time>
-              <%= admin.created_at.strftime("%Y.%m.%d") %>
+              <%= admin.start_on.strftime("%Y.%m.%d") %>
             </time>
             <h4>
               <%= admin.title.truncate(12) %>

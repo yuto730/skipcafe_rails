@@ -5,7 +5,7 @@ class SkipsController < ApplicationController
   end
 
   def news
-    @admins = Admin.order("created_at DESC").page(params[:page]).per(8)
+    @admins = Admin.page(params[:page]).per(8)
   end
 
   def newsDetail
@@ -36,6 +36,6 @@ class SkipsController < ApplicationController
   end
 
   def set_item
-    @admins = Admin.order("created_at DESC")
+    @admin_news = Admin.where('start_on <= ?', Date.today).order("created_at DESC")
   end
 end
