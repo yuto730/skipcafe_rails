@@ -73,7 +73,7 @@ http://54.95.225.125/
 # 実装した機能についての説明
 
 ## トップページ
-[![Image from Gyazo](https://i.gyazo.com/fa1a8b33fc138eb13756a4eb7e85d063.gif)](https://gyazo.com/fa1a8b33fc138eb13756a4eb7e85d063)
+![fa1a8b33fc138eb13756a4eb7e85d063](https://user-images.githubusercontent.com/72351740/102185792-f2b7b480-3ef4-11eb-9ee1-ba5f9216e9c8.gif)
 
 <br>
 
