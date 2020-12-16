@@ -11,7 +11,7 @@ SkipカフェWebサイト
 
 
 # URL
-http://54.95.225.125/
+https://skipcafe.herokuapp.com/
 
 # テスト用アカウント
 
