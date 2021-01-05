@@ -144,62 +144,63 @@
   padding: 15px 0;
   text-align: center;
 }
-.sidebar-menu{
-  padding: 15px 0;
+.left_nav{
+  width: 100%;
+  padding-top: 15px;
 }
-.sidebar-menu li, .sidebar-menu span{
+.left_nav li, .left_nav span{
   color: #333 !important;
 }
-.menu_home:hover{
-  background-color: #D7D7D7;
-  transition: 0.4s;
-}
-.menu_home a{
-  display: block;
-  padding: 15px 0 15px 10px;
-}
-#dropdown_user_btn, #dropdown_news_btn{
-  display: block;
+.nav_list{
   width: 100%;
-  padding: 15px 0 15px 10px;
+  padding-left: 10px;
 }
-#dropdown_user_btn:hover, #dropdown_news_btn:hover{
+.nav_list:hover {
   background-color: #D7D7D7;
   transition: 0.4s;
+}
+.nav_list a{
+  display: block;
+}
+.nav_text{
+  padding: 15px 0 15px 4px;
+  display: inline-block;
 }
 .fa-chevron-left{
-  position: absolute;
-  right: 30px;
-  font-size: 14px;
+  position: relative;
+  left: 80px;
+  transform: rotate(0deg);
+  transition: 0.2s;
 }
-.treeview-menu li:hover{
+.accordion{
+  width: 100%;
+}
+.accordion_title{
+  padding-left: 10px;
+  cursor: pointer;
+}
+.accordion_title:hover{
   background-color: #D7D7D7;
   transition: 0.4s;
 }
-.treeview-menu li a{
-  display: block;
-  padding: 15px 0px 15px 10px;
-  font-size: 14px;
-}
-
-.treeview-menu {
+.accordion_list{
   display: none;
 }
-#dropdown_user_btn.is-open + .treeview-menu {
-  display: block;
-  z-index: 4;
-}
-#dropdown_news_btn.is-open + .treeview-menu {
-  display: block;
-  z-index: 4;
-}
-.transform .fa-chevron-left{
-  transform: rotate(-90deg);
-  transition: 0.1s;
-}
-
-.sidebar-menu li a.current{
+.accordion_item:hover{
   background-color: #D7D7D7;
+  transition: 0.4s;
+}
+.accordion_item a{
+  display: block;
+  padding: 15px 0 15px 10px;
+}
+.open{
+  background-color: #D7D7D7;
+  transition: 0.6s;
+}
+.open .fa-chevron-left{
+  transform: rotate(-90deg);
+  transition: 0.2s;
 }
 
 
@@ -208,7 +209,7 @@
   position: absolute;
   right: 0;
   width: 83vw;
-  height: 100%;
+  min-height: 100vh;
   background-color: #F7F7F7;
 }
 
@@ -266,6 +267,7 @@
 /* コンテンツ */
 .admin_contents{
   width: 80vw;
+  min-height: 80vh;
   margin: 0 auto;
 }
 .admin_title{
@@ -286,13 +288,10 @@
 
 /* フッター */
 .admin_footer{
-  position: fixed;
-  bottom: 0;
   width: 100%;
   padding: 20px;
   border-top: 4px solid #E7E7E7;
   background-color: #fff;
-  text-align: left;
 }
 
 /* ユーザー情報編集 */
@@ -341,12 +340,12 @@
 }
 
 /* お知らせ新規投稿 */
-.edit_contents{
+/* .edit_contents{
   height: 130% !important;
-}
+} */
 #admin_news_form{
   width: 77vw;
-  margin: 30px auto 120px;
+  margin: 30px auto;
 }
 .admin_news_form{
   margin-bottom: 40px;

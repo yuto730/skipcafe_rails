@@ -2,22 +2,22 @@
   <p>&copy;&nbsp;2020&nbsp;Skipcafe</p>
 </footer>
 <script>
-  $("#dropdown_user_btn").on("click", function(){
-    $("#dropdown_user_btn").toggleClass("transform");
-  });
-  $("#dropdown_news_btn").on("click", function(){
-    $("#dropdown_news_btn").toggleClass("transform");
+  $(".nav_list").on("click", function(){
+    $(".nav_list").toggleClass("transform");
   });
 </script>
 <script>
-$(function(){
-  $('.sidebar-menu li a').each(function(){
-    var target = $(this).attr('href');
-    if(location.href.match(target)) {
-      $(this).parent().addClass('current');
-    } else {
-      $(this).parent().removeClass('current');
-    }
+  jQuery(function ($) {
+  //タイトルがクリックされたら
+  $(".accordion_title").click(function () {
+    //クリックしたjs-accordion-title以外の全てのopenを取る
+    $(".accordion_title").not(this).removeClass("open");
+    //クリックされたjs-accordion-title以外のcontentを閉じる
+    $(".accordion_title").not(this).next().slideUp(300);
+    //thisにopenクラスを付与
+    $(this).toggleClass("open");
+    //thisのcontentを展開、開いていれば閉じる
+    $(this).next().slideToggle(300);
   });
 });
 </script>

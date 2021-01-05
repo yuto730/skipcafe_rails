@@ -242,7 +242,7 @@
 }
 
 /* フッター */
-footer{
+#footer{
   text-align: center;
   margin-top: 80px;
 }
@@ -674,7 +674,7 @@ textarea{
   }
 
   /* フッター */
-  footer{
+  #footer{
     margin-top: 60px;
   }
   .footer_logo{
@@ -1087,7 +1087,7 @@ textarea{
   }
 
   /* フッター */
-  footer{
+  #footer{
     margin-top: 40px;
   }
   #copyright{
