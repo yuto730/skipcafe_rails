@@ -15,7 +15,11 @@ class SkipsController < ApplicationController
   def access
   end
 
-  def contact
+  # def contact
+  #   @contact = Contact.new
+  # end
+
+  def new
     @contact = Contact.new
   end
 
@@ -23,9 +27,11 @@ class SkipsController < ApplicationController
     @contact = Contact.new(contact_params)
     if @contact.save
       ContactMailer.contact_mail(@contact).deliver
+      flash[:success] = 'お問い合わせを受け付けました'
       redirect_to root_path
     else
-      redirect_to contact_skips_path
+      # redirect_to contact_skips_path
+      render :new
     end
   end
 
