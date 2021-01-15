@@ -118,11 +118,9 @@ Rails.application.configure do
     user_name: ENV['SENDGRID_USERNAME'],
     password: ENV['SENDGRID_PASSWORD'],
     domain: "heroku.com",
-    address: "smtp.sendgrid.net",
+    address: "smtp.SendGrid.net",
     port: 587,
     authentication: :plain,
     enable_starttls_auto: true
     }
-  config.action_mailer.perform_caching = false
-
 end
